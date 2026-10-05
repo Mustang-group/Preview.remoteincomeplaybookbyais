@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>রিমোট ইনকাম ব্লুপ্রিন্ট (ফ্রি প্রিভিউ এডিশন) — Army IBA Specialist (AIS)</title>
-<!-- Fonts -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -32,6 +32,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
@@ -53,7 +54,7 @@
     border: 1px solid var(--border);
   }
 
-  /* AIS Top Header Bar */
+  /* AIS Header Bar */
   .brand-bar {
     background: #040914;
     padding: 12px 24px;
@@ -83,6 +84,7 @@
     font-size: 13px;
     color: #ffffff;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
   }
 
   .brand-text-name {
@@ -112,13 +114,14 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    flex-shrink: 0;
   }
 
   /* Hero Section */
   .hero {
     background: linear-gradient(145deg, #050b18 0%, #0c203d 60%, #051327 100%);
     color: #ffffff;
-    padding: 40px 28px 34px;
+    padding: 40px 24px 34px;
     text-align: center;
     border-bottom: 4px solid var(--primary);
   }
@@ -157,7 +160,7 @@
 
   /* Content Body */
   .preview-content {
-    padding: 30px 28px;
+    padding: 28px 24px;
   }
 
   @media (max-width: 600px) {
@@ -174,7 +177,7 @@
     border: 1.5px solid var(--primary);
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .sim-title {
@@ -210,6 +213,7 @@
     cursor: pointer;
     text-align: center;
     transition: all 0.2s;
+    font-family: inherit;
   }
 
   .sim-btn:hover, .sim-btn.active {
@@ -232,14 +236,14 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Teaser Cards */
+  /* Teaser Section */
   .teaser-section-title {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px;
+    font-size: 15.5px;
     font-weight: 700;
-    margin: 24px 0 14px;
+    margin: 22px 0 12px;
     border-bottom: 2px solid var(--border);
     padding-bottom: 6px;
   }
@@ -271,381 +275,4 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
     color: #cbd5e1;
-    line-height: 1.55;
-    white-space: pre-wrap;
-  }
-
-  .blur-overlay-card {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 16px 0;
-    border: 1px solid var(--border);
-    background: #f8fafc;
-    padding: 16px;
-  }
-
-  .blurred-content {
-    filter: blur(4.5px);
-    opacity: 0.45;
-    user-select: none;
-    pointer-events: none;
-  }
-
-  .unlock-cta-floating {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #0f172a;
-    border: 1.5px solid var(--ais-gold);
-    color: #ffffff;
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 12.5px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 85%;
-    max-width: 380px;
-    justify-content: center;
-  }
-
-  /* Payment & Checkout Section */
-  .checkout-container {
-    background: linear-gradient(145deg, #050b18 0%, #0d1e38 100%);
-    color: #ffffff;
-    border: 2px solid var(--ais-gold);
-    border-radius: 12px;
-    padding: 24px;
-    margin-top: 32px;
-  }
-
-  .checkout-header {
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-    padding-bottom: 14px;
-  }
-
-  .checkout-header h3 {
-    font-size: 18px;
-    color: #f8fafc;
-    font-weight: 700;
-  }
-
-  .price-tag {
-    font-size: 22px;
-    color: var(--ais-gold);
-    font-weight: 800;
-    margin-top: 4px;
-    display: block;
-  }
-
-  .payment-method-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
-  .pay-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 8px;
-    padding: 12px 14px;
-    position: relative;
-  }
-
-  .pay-tag {
-    font-size: 11px;
-    font-weight: 700;
-    color: #38bdf8;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 4px;
-  }
-
-  .pay-val {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    font-weight: 700;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .copy-sm-btn {
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: #38bdf8;
-    padding: 2px 7px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-
-  .copy-sm-btn:hover { background: rgba(255,255,255,0.2); }
-
-  .confirmation-guide {
-    background: rgba(2, 132, 199, 0.12);
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    border-radius: 8px;
-    padding: 14px 16px;
-    font-size: 12.5px;
-    color: #e2e8f0;
-    margin-bottom: 16px;
-  }
-
-  .dispatch-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  @media (max-width: 500px) {
-    .dispatch-actions { grid-template-columns: 1fr; }
-  }
-
-  .btn-dispatch {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 12.5px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .btn-wa {
-    background: #25d366;
-    color: #ffffff;
-  }
-
-  .btn-wa:hover { background: #20ba5a; }
-
-  .btn-mail {
-    background: #0284c7;
-    color: #ffffff;
-  }
-
-  .btn-mail:hover { background: #0369a1; }
-
-  .footer-micro {
-    text-align: center;
-    font-size: 11px;
-    color: #94a3b8;
-    margin-top: 24px;
-    border-top: 1px solid var(--border);
-    padding-top: 14px;
-  }
-</style>
-</head>
-<body>
-
-<div class="preview-wrapper">
-
-  <!-- BRAND BAR -->
-  <div class="brand-bar">
-    <a href="https://www.facebook.com/share/1ZSuGprkLY/" target="_blank" class="brand-logo-wrap">
-      <div class="brand-crest">AIS</div>
-      <div>
-        <span class="brand-text-name">Army IBA Specialist</span>
-        <span class="brand-text-sub">Digital Publication Wing</span>
-      </div>
-    </a>
-    <div class="badge-free-preview">
-      <i data-lucide="unlock" style="width: 12px; height: 12px;"></i> ফ্রি প্রিভিউ কপি
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <div class="hero">
-    <h1>রিমোট ইনকাম ব্লুপ্রিন্ট</h1>
-    <p>জিরো স্কিল ও স্মার্টফোন দিয়ে ডলার উপার্জনের পূর্ণাঙ্গ ম্যানুয়াল (সংস্করণ ৪.০ প্রিভিউ)</p>
-    
-    <div class="hero-stats">
-      <span><i data-lucide="check" style="width: 14px; height: 14px; color: var(--accent);"></i> নো ডাটা-এন্ট্রি স্ক্যাম</span>
-      <span><i data-lucide="check" style="width: 14px; height: 14px; color: var(--accent);"></i> স্মার্টফোনে কাজ</span>
-      <span><i data-lucide="check" style="width: 14px; height: 14px; color: var(--accent);"></i> সরাসরি বিকাশ ও ব্যাংক</span>
-    </div>
-  </div>
-
-  <div class="preview-content">
-
-    <!-- INTERACTIVE MINI DECISION SIMULATOR -->
-    <div class="simulator-box">
-      <div class="sim-title">
-        <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i> আপনার জন্য কোন কাজ সেরা? (লাইভ টেস্ট)
-      </div>
-      <div class="sim-sub">নিচের অপশনগুলো ট্যাপ করে দেখুন আপনার ব্যাকগ্রাউন্ড অনুযায়ী কোন স্কিলে দ্রুততম সময়ে ইনকাম সম্ভব:</div>
-
-      <div style="font-size: 12px; color: #cbd5e1; margin-bottom: 6px; font-weight: 600;">আপনার ইংরেজি ও পছন্দ নির্বাচন করুন:</div>
-      <div class="sim-btn-group">
-        <button class="sim-btn" onclick="runSim('visual', this)">ভিজ্যুয়াল / জিরো ইংলিশ</button>
-        <button class="sim-btn" onclick="runSim('data', this)">ডাটা / পার্ট-টাইম জব</button>
-        <button class="sim-btn" onclick="runSim('ops', this)">ভালো ইংলিশ / অ্যাসিস্ট্যান্স</button>
-      </div>
-
-      <div class="sim-result-card" id="sim-res">
-        <div style="font-weight: 700; color: #38bdf8; font-size: 13.5px;" id="sim-track-name"></div>
-        <p style="font-size: 12px; color: #cbd5e1; margin: 4px 0 8px;" id="sim-track-desc"></p>
-        <div style="font-size: 11.5px; color: var(--ais-gold); font-weight: 700;" id="sim-track-earning"></div>
-      </div>
-    </div>
-
-    <!-- SAMPLE UNLOCKED LESSON -->
-    <div class="teaser-section-title">
-      <i data-lucide="zap" style="width: 18px; height: 18px; color: var(--primary);"></i>
-      আনলকড স্যাম্পল: ৩-বাক্যের আমেরিকান ক্লায়েন্ট পিচ স্ক্রিপ্ট
-    </div>
-    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
-      কোনো দীর্ঘ কভার লেটার নয়; বিদেশি ক্লায়েন্টদের আকর্ষণ করার জন্য ব্লুপ্রিন্ট থেকে নেওয়া সরাসরি কপি-পেস্ট স্ক্রিপ্ট:
-    </p>
-
-    <div class="sample-box">
-      <div class="sample-badge">Validated Template</div>
-      <div class="sample-text">Subject: Vertical Short edit for your recent episode on [Topic]
-
-Hi [Name], loved your point on [Specific Insight from their video].
-
-I noticed your YouTube channel is missing vertical Shorts to capture mobile viewers, so I took 45 seconds of your latest episode and edited it with dynamic captions and pacing: [Insert Unlisted YouTube Shorts Link]
-
-If you like the editing, feel free to post it right away. If you'd like 12 of these per month managed for you on autopilot, I can handle them directly.</div>
-    </div>
-
-    <!-- LOCKED MODULES TEASER -->
-    <div class="teaser-section-title">
-      <i data-lucide="lock" style="width: 18px; height: 18px; color: var(--danger);"></i>
-      পূর্ণাঙ্গ এডিশনে যা যা পাচ্ছেন (লকড মডিউল)
-    </div>
-
-    <div class="blur-overlay-card">
-      <div class="blurred-content">
-        <h4 style="font-size: 14px;">অধ্যায় ৪ ও ৫: বাংলাদেশ ব্যাংক এফই সার্কুলার ২২ ও $১৫০ উইথড্রয়াল রুল</h4>
-        <p>টাকা কীভাবে সরাসরি লোকাল ব্যাংকে আনলে সরকারি ২.৫% প্রণোদনা মিলবে এবং কীভাবে এনবিআর-এ জিরো ট্যাক্স রিটার্ন দাখিল করবেন...</p>
-        <h4 style="font-size: 14px; margin-top: 10px;">অধ্যায় ৬: এআই প্রম্পট প্যাক ও স্প্যাম-ফ্রি আউটরিচ ইঞ্জিন</h4>
-        <p>জিমেইল স্প্যাম ফিল্টার বাইপাস করে সরাসরি লিঙ্কডইন ও টুইটার ইনবক্সে ক্লায়েন্ট ক্লোজ করার ফিল্ড টেমপ্লেট...</p>
-      </div>
-
-      <div class="unlock-cta-floating">
-        <i data-lucide="key" style="width: 16px; height: 16px; color: var(--ais-gold);"></i>
-        পূর্ণাঙ্গ ব্লুপ্রিন্ট ও রিসোর্স বান্ডেলে আনলক করুন
-      </div>
-    </div>
-
-    <!-- INSTANT CHECKOUT & DISPATCH HUB -->
-    <div class="checkout-container">
-      <div class="checkout-header">
-        <span style="font-size: 12px; color: #94a3b8; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">অফিসিয়াল AIS ডিজিটাল বুকস্টোর</span>
-        <h3>সম্পূর্ণ ব্লুপ্রিন্ট, প্রম্পট প্যাক ও রিসোর্স বান্ডেল সংগ্রহ করুন</h3>
-        <span class="price-tag">৳২৯৯ মাত্র</span>
-      </div>
-
-      <div class="payment-method-grid">
-        <!-- bKash -->
-        <div class="pay-card">
-          <div class="pay-tag"><i data-lucide="smartphone" style="width: 12px; height: 12px;"></i> bKash (Personal)</div>
-          <div class="pay-val">
-            <span id="bkash-num">01715219176</span>
-            <button class="copy-sm-btn" onclick="copyText('01715219176')">Copy</button>
-          </div>
-        </div>
-
-        <!-- Nagad -->
-        <div class="pay-card">
-          <div class="pay-tag"><i data-lucide="smartphone" style="width: 12px; height: 12px;"></i> Nagad (Personal)</div>
-          <div class="pay-val">
-            <span id="nagad-num">01708761298</span>
-            <button class="copy-sm-btn" onclick="copyText('01708761298')">Copy</button>
-          </div>
-        </div>
-
-        <!-- Bank / NPSB -->
-        <div class="pay-card" style="grid-column: 1 / -1;">
-          <div class="pay-tag"><i data-lucide="building" style="width: 12px; height: 12px;"></i> Trust Bank PLC (NPSB / Bank Transfer)</div>
-          <div style="font-size: 12px; color: #e2e8f0; line-height: 1.5; margin-top: 4px;">
-            <div><strong>A/C No:</strong> <span style="font-family: 'JetBrains Mono'; color: #38bdf8;">00110466000494</span> <button class="copy-sm-btn" onclick="copyText('00110466000494')">Copy</button></div>
-            <div><strong>A/C Title:</strong> Rizum khan</div>
-            <div><strong>Branch:</strong> Jalalabad Cantonment Branch</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="confirmation-guide">
-        <i data-lucide="info" style="width: 14px; height: 14px; display: inline; vertical-align: middle; color: #38bdf8;"></i>
-        <strong>বইটি পাওয়ার নিয়ম:</strong> যেকোনো মাধ্যমে <strong>৳২৯৯</strong> সেন্ড মানি বা ট্রান্সফার করে ট্রানজেকশন আইডি (TrxID) বা স্টেটমেন্টের স্ক্রিনশট নিচের হোয়াটসঅ্যাপ অথবা ই-মেইলে পাঠিয়ে দিন। ভেরিফিকেশনের সাথে সাথে সম্পূর্ণ ব্লুপ্রিন্ট ও রিসোর্স বান্ডেল পাঠিয়ে দেওয়া হবে।
-      </div>
-
-      <div class="dispatch-actions">
-        <!-- WhatsApp One-Click -->
-        <a href="https://wa.me/8801410761298?text=Hello%20AIS,%20I%20have%20sent%20money%20for%20the%20Remote%20Income%20Blueprint.%20Here%20is%20my%20TrxID/Screenshot:" target="_blank" class="btn-dispatch btn-wa">
-          <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp-এ TrxID পাঠান
-        </a>
-
-        <!-- Email One-Click -->
-        <a href="mailto:armyibaspecialist@gmail.com?subject=Payment%20Proof%20for%20Remote%20Income%20Blueprint&body=Hello%20AIS%20Team,%0A%0AI%20have%20transferred%20the%20payment%20of%20BDT%20299.%0AMy%20Transaction%20Details/TrxID:%20" class="btn-dispatch btn-mail">
-          <i data-lucide="mail" style="width: 16px; height: 16px;"></i> ই-মেইলে TrxID পাঠান
-        </a>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer-micro">
-      Army IBA Specialist (AIS) © 2026 — অল রাইটস রিজার্ভড | <a href="https://www.facebook.com/share/1ZSuGprkLY/" target="_blank" style="color: var(--primary); text-decoration: none;">অফিসিয়াল ফেসবুক পেজ</a>
-    </div>
-
-  </div>
-</div>
-
-<script>
-  // Init Icons
-  lucide.createIcons();
-
-  // Mini Interactive Simulator
-  function runSim(type, btn) {
-    const parent = btn.parentElement;
-    Array.from(parent.children).forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const res = document.getElementById('sim-res');
-    const title = document.getElementById('sim-track-name');
-    const desc = document.getElementById('sim-track-desc');
-    const earning = document.getElementById('sim-track-earning');
-
-    res.style.display = 'block';
-
-    if (type === 'visual') {
-      title.innerText = "🎯 শর্ট-ফর্ম ভিডিও এডিটিং (Shorts/Reels)";
-      desc.innerText = "কোনো ইংরেজি কথা বলার প্রয়োজন নেই। ফোনের CapCut দিয়ে ০.৩ সেকেন্ডের কাটিং ও বাউন্সি সাবটাইটেল বসিয়ে আনলিস্টেড ইউটিউব লিংকের মাধ্যমে ৫ সেকেন্ডেই ইউএস ক্লায়েন্টকে মুগ্ধ করা যায়।";
-      earning.innerText = "সম্ভাব্য আয়: $২০০ – $৪৫০/মাস (প্রতি ভিডিও $১৫–$২৫)";
-    } else if (type === 'data') {
-      title.innerText = "🎯 B2B প্রস্পেক্টিং ও লিড জেনারেশন";
-      desc.innerText = "চাকরিজীবীদের জন্য সেরা। অফিস শেষে রাতে মাত্র ১ ঘণ্টা ফোন দিয়ে লিঙ্কডইন ও গুগলে সার্চ করে কোম্পানির সিইওদের ভেরিফায়েড ইমেইল শিটে তুলবেন। ১০০% ম্যাথমেটিক্যাল কাজ।";
-      earning.innerText = "সম্ভাব্য আয়: $১৫০ – $৩৫০/মাস";
-    } else {
-      title.innerText = "🎯 এক্সিকিউটিভ রিমোট অপারেশনস ও লিঙ্কডইন রাইটিং";
-      desc.innerText = "যেহেতু আপনার টেক্সট কমিউনিকেশন ভালো, পশ্চিমা ফাউন্ডারদের ইমেইল ইনবক্স ম্যানেজ বা এআই দিয়ে তাদের লিঙ্কডইন পোস্ট শিডিউল করার মান্থলি অ্যাসিস্ট্যান্ট হিসেবে কাজ করতে পারবেন।";
-      earning.innerText = "সম্ভাব্য আয়: $৩০০ – $৬০০/মাস (ফিক্সড রিটেইনার)";
-    }
-  }
-
-  // Copy to clipboard helper
-  function copyText(val) {
-    navigator.clipboard.writeText(val);
-    alert('কপি হয়েছে: ' + val);
-  }
-</script>
-
-</body>
-</html>
+    line-height: 1
